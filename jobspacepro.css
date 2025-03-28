@@ -9,13 +9,33 @@ body {
   
 }
 
-#home{
+/* Video Section */
+#home {
   display: flex;
-  justify-content: center;  /* Horizontal */
-  align-items: center;      /* Vertical */
-  min-height: 700px;        /* Ensure section has height */
-  background:hsl(212, 83%, 5%); /* Blue background */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full screen height */
+  background: #060606;
+  padding: 10px;
+  overflow: hidden; /* Prevent unwanted scrollbars */
+}
+
+/* Video Styling */
+#bg-video {
+  width: 100%;
+  max-width: 800px; /* Limit width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure video fills the container */
+  border-radius: 10px; /* Optional rounded corners */
+}
+
+/* Responsive Fix for Smaller Screens */
+@media (max-width: 400px) {
+  #bg-video {
+      width: 90%; /* Scale down for mobile */
+      max-width: 100%;
   }
+}
 
 /* Section with Background Color */
 * {
@@ -143,59 +163,49 @@ body {
       font-size: 24px;
   }
 }
-#jobs{
-  text-align: center;
- }
 #jobs {
-    background-color: hsl(212, 83%, 5%); /* Blue background */
-    color: white; /* White text */
-    text-align: left;
-    padding: 50px;
-    }
- #jobs h2 { color:#007bff;} 
- #Learn-More{text-align: center;}
-
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  background-color: hsl(212, 83%, 5%);
+  color: white;
+  text-align: left;
+  padding: 50px;
 }
 
-
-/* Page Content */
-section {
-  padding: 50px;
+#jobs ul {
+  list-style-type: none;
+  padding: 0;
   text-align: center;
 }
 
+#jobs h2 {
+  color: #007bff;
+  margin-bottom: 15px;
+  text-align: center;
+}
 
- 
-/* Button Styling */
+#jobs p {
+  margin-left: 20px;
+  text-align: center;
+}
 .btn {
-    display: inline-block;
-    background:blue; /* Blue background */
-    color: black;
-    padding: 20px 20px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: blue;
+  color: black;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin: auto;
+  width: fit-content;
 }
 
 .btn:hover {
-    background: #0056b3;
-    color: white;
+  background: #0056b3;
+  color: white;
 }
-   body{ font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: white;
-    text-align: center;
-
-
-} 
 
 /*apply*/ 
 
@@ -522,112 +532,119 @@ input {
   background: rgb(61, 61, 250);
 }
 
+/*HEADER FIXED*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-/* Fixed Header */
+body {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
 header {
   display: flex;
-  justify-content: center;
-  align-items: left;
- background-image: url(bg2.jpg);
-  padding: 10px 10px;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 10px 20px;
+  position: fixed;
   width: 100%;
-  position: fixed; /* Makes the header fixed at the top */
   top: 0;
   left: 0;
   z-index: 1000;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  font-size: 18px;
-}
-
-/* Logo */
-.logo {
-  display: flex;
-  align-items: center;
 }
 
 .logo img {
-  width: 200px;
-  height: 100px;
-  margin-right: 10px;
+  width: 150px;
+  height: auto;
 }
 
-.logo span {
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-}
-
-/* Navigation Menu */
-.menu {
+nav ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
-  gap: 10px;
+  gap: 15px;
 }
 
-.menu li {
+nav ul li {
   position: relative;
 }
 
-/* Top-Level Menu Items */
-.menu li a {
+nav ul li a {
   text-decoration: none;
-  color:black;
-  font-size: 18px;
-  padding: 10px 15px;
+  color: white;
+  padding: 10px;
+  display: block;
   transition: 0.3s;
-  display: inline-block;
 }
 
-/* Dropdown Menu (Hidden by Default) */
+nav ul li a:hover {
+  background: #007bff;
+  border-radius: 5px;
+}
+
 .dropdown-menu {
-  list-style: none;
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background: white;
+  list-style: none;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  display: none;
-  min-width: 180px;
+  min-width: 150px;
 }
 
-/* Dropdown Menu Links */
-.dropdown-menu li {
-  width: 100%;
-}
-
-.dropdown-menu li a {
-  color:black;
-  padding: 10px;
-  display: block;
-  text-align: left;
-  font-size: 18px;
-}
-
-/* Show Dropdown Menu on Hover */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
-/* Hover Effects */
-.menu li a:hover {
-  background: white;
-  color: #007bff;
-  border-radius: 5px;
+.dropdown-menu li a {
+  color: black;
+  padding: 10px;
+  display: block;
 }
 
-.dropdown-menu li a:hover {
-  background: #007bff;
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
   color: white;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-/* Content Section to Test Fixed Header */
-.content {
-  padding: 50px;
-  text-align: center;
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: #222;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      padding: 10px 0;
+  }
+
+  .menu.active {
+      display: flex;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
 }
+
 
 /*WHY CHOOSE JOB SPACE PRO*/
 
@@ -1369,6 +1386,7 @@ footer {
   text-align: center;
 }
 
+
 /* Branding Section */
 .footer-branding {
   display: flex;
@@ -1403,24 +1421,27 @@ footer {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
+
 
 .footer-nav ul li {
   display: inline-block;
   margin: 0 10px;
 }
-
 .footer-nav ul li a {
-  color:black;
+  color: white;
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s ease, transform 0.3s ease;
 }
-
 .footer-nav ul li a:hover {
-  color: #3498db; /* Change link color on hover */
-  transform: translateY(-3px); /* Move link slightly up on hover */
+    color: #3498db;
+    transform: translateY(-3px);
 }
+
 
 /* Copyright Text */
 .copyright {
@@ -1445,10 +1466,12 @@ footer {
   }
 
   .footer-nav ul li {
-      display: block;
-      margin: 10px 0;
-  }
+    display: inline-block;
 }
+}
+
+        
+      
 hr
 {margin-top: 100px;}
 #Learn-More{ background-image: url(jsp1.jpg);
