@@ -195,14 +195,57 @@ section {
     text-align: center;
 
 
+} 
+
+/*apply*/ 
+
+#apply {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  color: black;
 }
-   
 
-    #apply h2{color:#007bff;}
-    #apply p{color:black}
+#apply h2 {
+  color: #007bff;
+  font-size: 28px;
+}
 
-    #about-applicants h1{color:#007bff;}
-    #about-applicants p{color:black;}
+#apply p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  #apply { padding: 20px; }
+  #apply h2 { font-size: 24px; }
+  #apply p { font-size: 16px; }
+}
+    /* about -applicants*/
+    #about-applicants {
+      text-align: center;
+      padding: 40px;
+      background: white;
+      color: black;
+  }
+
+  #about-applicants h1 {
+      color: #007bff;
+      font-size: 28px;
+  }
+
+  #about-applicants p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: auto;
+  }
+
+  @media (max-width: 768px) {
+      #about-applicants { padding: 20px; }
+      #about-applicants h1 { font-size: 24px; }
+      #about-applicants p { font-size: 16px; }
+  }
            
         
         /* Form Section */
