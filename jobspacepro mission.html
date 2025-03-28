@@ -21,34 +21,39 @@
     
     <!-- Fixed Header Navigation -->
     <header>
-      <div class="logo">
-          <img src="Job Space Pros logo.gif" alt="Job Space Pro Logo" width="500" height="500">
-       
-      </div>
-      <nav>
-          <ul class="menu">
-              <li><a href="Job Space Pro.html">Home</a></li>
-              <li class="dropdown">
-                  <a href="jobspacepro about.html">About ▾</a>
-                  <ul class="dropdown-menu">
-                      <li><a href="jobspacepro mission.html">Our Mission</a></li>
-                      <li><a href="jobspacepro faqs.html">FAQS</a></li>
-                  </ul>
-              </li>
-              <li><a href="jobspacepro service.html">Services</a></li>
-              <li class="dropdown">
-                  <a href="jobspacepro why choose us.html">Why Choose Us ▾</a>
-                  <ul class="dropdown-menu">
-                      <li><a href="jobspacepro benefits.html">Benefits</a></li>
-                      <li><a href="jobspacepro testimonial.html">Testimonials</a></li>
-                    
-                  </ul>
-              </li>
-              <li><a href="jobspacepro contact.html">Apply Now</a></li>
-          </ul>
-      </nav>
- 
-  </header>
+        <div class="logo">
+            <img src="Job Space Pros logo.gif" alt="Job Space Pro Logo">
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav>
+            <ul class="menu">
+                <li><a href="Job Space Pro.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="jobspacepro about.html">About ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="jobspacepro mission.html">Our Mission</a></li>
+                        <li><a href="jobspacepro faqs.html">FAQs</a></li>
+                    </ul>
+                </li>
+                <li><a href="jobspacepro service.html">Services</a></li>
+                <li class="dropdown">
+                    <a href="jobspacepro why choose us.html">Why Choose Us ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="jobspacepro benefits.html">Benefits</a></li>
+                        <li><a href="jobspacepro testimonial.html">Testimonials</a></li>
+                    </ul>
+                </li>
+                <li><a href="jobspacepro contact.html">Apply Now</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <script>
+        function toggleMenu() {
+            document.querySelector('.menu').classList.toggle('active');
+        }
+    </script>
+    
   <hr>
   <section id="mission" class="mission-section">
     <div class="container1">
