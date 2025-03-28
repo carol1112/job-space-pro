@@ -551,7 +551,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #222;
+  background-image: url(bg2.jpg);
   padding: 10px 20px;
   position: fixed;
   width: 100%;
@@ -1366,7 +1366,8 @@ footer{
   background-attachment: fixed;}
   
 
-       
+        
+      
 hr
 {margin-top: 100px;}
 #Learn-More{ background-image: url(jsp1.jpg);
