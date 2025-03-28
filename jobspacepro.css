@@ -1365,110 +1365,6 @@ footer{
   background-size: cover;
   background-attachment: fixed;}
   
-/* Basic Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-}
-
-/* Footer Styles */
-footer {
-  background-color: #2c3e50;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-
-/* Branding Section */
-.footer-branding {
-  display: flex;
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Align items vertically */
-  gap: 20px; /* Space between logo and QR code */
-  margin-bottom: 20px;
-}
-
-.footer-branding .logo {
-  width: 150px;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.footer-branding .logo:hover {
-  transform: scale(1.1); /* Enlarge logo on hover */
-}
-
-.footer-branding .qr-code {
-  width: 100px;
-  height: auto;
-  transition: opacity 0.3s ease;
-}
-
-.footer-branding .qr-code:hover {
-  opacity: 0.8; /* Fade QR code slightly on hover */
-}
-
-/* Navigation Links */
-.footer-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-
-.footer-nav ul li {
-  display: inline-block;
-  margin: 0 10px;
-}
-.footer-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-.footer-nav ul li a:hover {
-    color: #3498db;
-    transform: translateY(-3px);
-}
-
-
-/* Copyright Text */
-.copyright {
-  margin-top: 20px;
-  font-size: 14px;
-  color:black;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .footer-branding {
-      flex-direction: column; /* Stack logo and QR code vertically on small screens */
-      gap: 10px;
-  }
-
-  .footer-branding .logo {
-      width: 120px;
-  }
-
-  .footer-branding .qr-code {
-      width: 80px;
-  }
-
-  .footer-nav ul li {
-    display: inline-block;
-}
-}
 
         
       
@@ -1479,3 +1375,106 @@ hr
   background-size: cover;
   background-attachment: fixed;}
   #Learn-More h1{color: blue;}
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Branding Section */
+  .footer-branding {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Space between logo and QR code */
+    margin-bottom: 20px;
+  }
+  
+  .footer-branding .logo {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-branding .logo:hover {
+    transform: scale(1.1); /* Enlarge logo on hover */
+  }
+  
+  .footer-branding .qr-code {
+    width: 100px;
+    height: auto;
+    transition: opacity 0.3s ease;
+  }
+  
+  .footer-branding .qr-code:hover {
+    opacity: 0.8; /* Fade QR code slightly on hover */
+  }
+  
+  /* Navigation Links */
+  .footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .footer-nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .footer-nav ul li a {
+    color:black;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .footer-nav ul li a:hover {
+    color: #3498db; /* Change link color on hover */
+    transform: translateY(-3px); /* Move link slightly up on hover */
+  }
+  
+  /* Copyright Text */
+  .copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color:black;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-branding {
+        flex-direction: column; /* Stack logo and QR code vertically on small screens */
+        gap: 10px;
+    }
+  
+    .footer-branding .logo {
+        width: 120px;
+    }
+  
+    .footer-branding .qr-code {
+        width: 80px;
+    }
+  
+    .footer-nav ul li {
+        display: block;
+        margin: 10px 0;
+    }}
