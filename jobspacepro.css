@@ -219,7 +219,7 @@ body {
   font-size: 18px;
   line-height: 1.6;
 
-  max-width: 1400px:
+  max-width: 1500px;
   
 }
 
@@ -996,7 +996,7 @@ button[type="submit"]:hover {
 /*services*/
 #jobs {
   background-color: hsl(212, 83%, 5%);
-  color: white;
+  color:white;
   text-align: left;
   padding: 50px;
 }
@@ -1044,9 +1044,13 @@ hr
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;}
-  #Learn-More h1{color: blue;}
-
-
+  #Learn-More h1{
+    color: blue;}
+    #Learn-More h2{
+      color:#007bff;}
+      #Learn-More p{
+        color: black;}
+  
 
 
   /* FAQS */
