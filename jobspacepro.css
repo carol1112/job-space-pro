@@ -122,7 +122,7 @@ nav ul li a:hover {
 @media (min-width: 769px) and (max-width: 1024px) { 
   /* Logo size for tablet and laptop */
   .logo img {
-    height: 120px;  /* Logo height for tablet/laptop */
+    height: 100px;  /* Logo height for tablet/laptop */
   }
 }
 
@@ -130,7 +130,7 @@ nav ul li a:hover {
 @media (min-width: 1025px) {  
   /* Logo size for desktop and larger screens */
   .logo img {
-    height: 150px;  /* Logo height for desktop/laptop */
+    height: 120px;  /* Logo height for desktop/laptop */
   }
 
   nav ul {
@@ -181,9 +181,9 @@ body {
 /* Responsive Adjustments for Various Screen Sizes */
 @media (min-width: 1024px) and (max-width: 1366px) { /* Laptops */
   #bg-video {
-    width: 90%;         /* Adjust width for better scaling */
-    height: 70vh;       /* Set a percentage of viewport height */
-    max-height: 500px;  /* Set a max height to prevent excessive scaling */
+    width: 80%;         /* Adjust width for better scaling */
+    height: 65vh;       /* Set a percentage of viewport height */
+    max-height: 400px;  /* Set a max height to prevent excessive scaling */
   }
 }
 
