@@ -179,10 +179,11 @@ body {
 }  
 
 /* Responsive Adjustments for Various Screen Sizes */
-@media (max-width: 1024px) { /* Tablets and below */
+@media (min-width: 1024px) and (max-width: 1366px) { /* Laptops */
   #bg-video {
-    width: 80%;             /* Slightly reduce width for laptops */
-    height: auto;           /* Maintain aspect ratio */
+    width: 90%;         /* Adjust width for better scaling */
+    height: 80vh;       /* Set a percentage of viewport height */
+    max-height: 600px;  /* Set a max height to prevent excessive scaling */
   }
 }
 
