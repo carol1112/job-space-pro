@@ -172,73 +172,76 @@ body {
 /* Video Section */
 #home {
   display: flex;
-  justify-content: center;  /* Centers the video horizontally */
-  align-items: center;      /* Centers the video vertically */
-  min-height: 100vh;         /* Full screen height */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   background: white;
   padding: 10px;
-  overflow: hidden;          /* Prevent unwanted scrollbars */
-  margin-top: 60px;          /* Adjust margin to make space for the fixed header */
-  position: relative;        /* Ensure the video is positioned relative */
-  z-index: 1;   
+  overflow: hidden;
+  margin-top: 60px;
+  position: relative;
+  z-index: 1;
 }
 
 /* Video Styling */
 #bg-video {
-  width: 100%;
-  max-width: 1000px;         /* Max width for desktops */
-  height: auto;              /* Auto height to maintain aspect ratio */
-  object-fit: contain;       /* Ensure the entire video is visible */
-  border-radius: 10px;       /* Optional rounded corners */
-  margin: 0 auto;            /* Centers the video within the container */
-  position: relative;        /* To ensure the z-index works */
-  z-index: 1;  
+  width: 60%;            /* Reduce size but keep aspect ratio */
+  height: auto;          /* Maintain aspect ratio */
+  max-width: 800px;      /* Set max width to avoid large scaling */
+  max-height: 450px;     /* Set max height to avoid excessive height */
+  object-fit: contain;   /* Keep full video visible without cropping */
+  border-radius: 10px;   /* Optional rounded corners */
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }  
 
-/* Responsive Adjustments for Laptops */
-@media (min-width: 1024px) and (max-width: 1366px) { /* Laptops */
+/* Responsive Adjustments for Laptops (1366px screens) */
+@media (min-width: 1024px) and (max-width: 1366px) { 
   #bg-video {
-    width: 85%;         /* Increase width for better visibility */
-    height: auto;       /* Maintain aspect ratio */
-    max-height: 500px;  /* Increase max height */
-    object-fit: contain; /* Prevent cropping, ensuring full video is visible */
+    width: 50%;         /* Reduce size more for laptops */
+    max-width: 700px;   /* Limit max width */
+    max-height: 400px;  /* Keep proportional height */
   }
 }
 
-/* Responsive Adjustments for Tablets */
-@media (max-width: 768px) { /* Small tablets and larger smartphones */
+/* Tablets */
+@media (max-width: 768px) { 
   header {
     flex-direction: column;
     align-items: flex-start;
   }
 
   .logo img {
-    height: 100px; /* Logo height for mobile/tablet */
+    height: 100px;
   }
 
   #bg-video {
-    width: 100%;             /* Full width for small screens */
-    height: auto;            /* Auto height to maintain aspect ratio */
+    width: 70%;
+    max-width: 600px;
+    max-height: 350px;
   }
 }
 
-/* Responsive Adjustments for Mobile */
-@media (max-width: 480px) { /* Mobile phones */
+/* Mobile */
+@media (max-width: 480px) { 
   .logo img {
-    height: 80px; /* Smaller logo for mobile */
+    height: 80px;
   }
 
   #bg-video {
-    width: 100%;             /* Full width for mobile */
-    height: auto;            /* Auto height to maintain aspect ratio */
+    width: 90%;
+    max-width: 400px;
+    max-height: 250px;
   }
 }
 
 /* Very Small Screens */
-@media (max-width: 400px) { /* Very small screens */
+@media (max-width: 400px) { 
   #bg-video {
-    width: 100%;             /* Full width for very small screens */
-    height: auto;            /* Auto height to maintain aspect ratio */
+    width: 95%;
+    max-width: 350px;
+    max-height: 200px;
   }
 }
 /*about us*/
