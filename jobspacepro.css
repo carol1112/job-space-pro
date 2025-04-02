@@ -29,7 +29,7 @@ header {
 
 .logo img {
   width: auto;
-  height: 150px; /* Default height for desktop/laptop */
+  height: 100px; /* Default height for desktop/laptop */
 }
 
 nav ul {
@@ -199,7 +199,7 @@ body {
 @media (min-width: 1024px) and (max-width: 1366px) { /* Laptops */
   #bg-video {
     width: 70%;         /* Adjust width for better scaling */
-    height: 50vh;       /* Set a percentage of viewport height */
+    height: 40vh;       /* Set a percentage of viewport height */
     max-height: 300px;  /* Set a max height to prevent excessive scaling */
   }
 }
