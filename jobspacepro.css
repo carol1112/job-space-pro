@@ -195,14 +195,14 @@ body {
 
 @media (max-width: 480px) { /* Mobile phones */
   #bg-video {
-    width: 60%;             /* Full width for mobile */
+    width: 100%;             /* Full width for mobile */
     height: auto;            /* Auto height to maintain aspect ratio */
   }
 }
 
 @media (max-width: 400px) { /* Very small screens */
   #bg-video {
-    width: 50%;             /* Full width for very small screens */
+    width: 100%;             /* Full width for very small screens */
     height: auto;            /* Auto height to maintain aspect ratio */
   }
 }
