@@ -152,6 +152,7 @@ body {
 }
 
 /* Video Section */
+/* Video Section */
 #home {
   display: flex;
   justify-content: center;  /* Centers the video horizontally */
@@ -180,32 +181,31 @@ body {
 /* Responsive Adjustments for Various Screen Sizes */
 @media (max-width: 1024px) { /* Tablets and below */
   #bg-video {
-    width: 100%;             /* Full width for tablet */
-    height: 100%;            /* Full height to maintain aspect ratio */
+    width: 80%;             /* Slightly reduce width for laptops */
+    height: auto;           /* Maintain aspect ratio */
   }
 }
 
 @media (max-width: 768px) { /* Small tablets and larger smartphones */
   #bg-video {
-    width: 100%;             /* Full width for small screens */
-    height: 100%;            /* Full height to maintain aspect ratio */
+    width: 70%;             /* Full width for small screens */
+    height: auto;            /* Auto height to maintain aspect ratio */
   }
 }
 
 @media (max-width: 480px) { /* Mobile phones */
   #bg-video {
-    width: 100%;             /* Full width for mobile */
-    height: 100%;            /* Full height to maintain aspect ratio */
+    width: 60%;             /* Full width for mobile */
+    height: auto;            /* Auto height to maintain aspect ratio */
   }
 }
 
 @media (max-width: 400px) { /* Very small screens */
   #bg-video {
-    width: 100%;             /* Full width for very small screens */
-    height: 100%;            /* Full height to maintain aspect ratio */
+    width: 50%;             /* Full width for very small screens */
+    height: auto;            /* Auto height to maintain aspect ratio */
   }
 }
-
 
 /*about us*/
 * {
@@ -221,7 +221,7 @@ body {
 
 #home1 {
   background-color: hsl(212, 83%, 5%);
-  color: white;
+ 
   text-align: center;
   padding: 30px;
   min-height: 100vh;
@@ -235,12 +235,15 @@ body {
 #home1 h1 {
   font-size: 2rem;
   margin-bottom: 20px;
+  color:#007bff;
 }
+
 
 #home1 p {
   max-width: 800px;
   text-align: justify;
   margin-bottom: 15px;
+  color:white;
 }
 
 @media (max-width: 768px) {
