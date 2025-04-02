@@ -182,8 +182,8 @@ body {
 @media (min-width: 1024px) and (max-width: 1366px) { /* Laptops */
   #bg-video {
     width: 90%;         /* Adjust width for better scaling */
-    height: 80vh;       /* Set a percentage of viewport height */
-    max-height: 600px;  /* Set a max height to prevent excessive scaling */
+    height: 70vh;       /* Set a percentage of viewport height */
+    max-height: 500px;  /* Set a max height to prevent excessive scaling */
   }
 }
 
