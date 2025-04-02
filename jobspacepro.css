@@ -9,7 +9,6 @@
 }
 
 body {
-  
   color: white;
   text-align: center;
   padding: 20px;
@@ -29,8 +28,8 @@ header {
 }
 
 .logo img {
-  width: 150px;
-  height: auto;
+  width: auto;
+  height: 150px; /* Default height for desktop/laptop */
 }
 
 nav ul {
@@ -87,29 +86,59 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+/* Responsive Design for Logo */
+@media (max-width: 768px) {  /* Mobile and tablet */
   header {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Logo size for mobile and tablet */
+  .logo img {
+    height: 100px; /* Logo height for mobile/tablet */
   }
 
   .menu {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      background: #222;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      padding: 10px 0;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #222;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
   }
 
   .menu.active {
-      display: flex;
+    display: flex;
   }
 
   .menu-toggle {
-      display: block;
+    display: block;
+  }
+}
+
+/* Tablet and Laptop */
+@media (min-width: 769px) and (max-width: 1024px) { 
+  /* Logo size for tablet and laptop */
+  .logo img {
+    height: 120px;  /* Logo height for tablet/laptop */
+  }
+}
+
+/* Desktop and larger screens */
+@media (min-width: 1025px) {  
+  /* Logo size for desktop and larger screens */
+  .logo img {
+    height: 150px;  /* Logo height for desktop/laptop */
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: none;
   }
 }
 /* General Styles */
@@ -125,30 +154,58 @@ body {
 /* Video Section */
 #home {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* Full screen height */
-  background:whitesmoke;
+  justify-content: center;  /* Centers the video horizontally */
+  align-items: center;      /* Centers the video vertically */
+  min-height: 100vh;         /* Full screen height */
+  background: white;
   padding: 10px;
-  overflow: hidden; /* Prevent unwanted scrollbars */
+  overflow: hidden;          /* Prevent unwanted scrollbars */
+  margin-top: 60px;          /* Adjust margin to make space for the fixed header */
+  position: relative;        /* Ensure the video is positioned relative */
+  z-index: 1;   
 }
 
 /* Video Styling */
 #bg-video {
   width: 100%;
-  max-width: 800px; /* Limit width */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure video fills the container */
-  border-radius: 10px; /* Optional rounded corners */
-}
+  max-width: 1000px;         /* Max width for desktops */
+  height: 100%;              /* Ensure the video fills the container */
+  object-fit: cover;         /* Ensure the video maintains aspect ratio */
+  border-radius: 10px;       /* Optional rounded corners */
+  margin: 0 auto;            /* Centers the video within the container */
+  position: relative;        /* To ensure the z-index works */
+  z-index: 1;  
+}  
 
-/* Responsive Fix for Smaller Screens */
-@media (max-width: 400px) {
+/* Responsive Adjustments for Various Screen Sizes */
+@media (max-width: 1024px) { /* Tablets and below */
   #bg-video {
-      width: 90%; /* Scale down for mobile */
-      max-width: 100%;
+    width: 100%;             /* Full width for tablet */
+    height: 100%;            /* Full height to maintain aspect ratio */
   }
 }
+
+@media (max-width: 768px) { /* Small tablets and larger smartphones */
+  #bg-video {
+    width: 100%;             /* Full width for small screens */
+    height: 100%;            /* Full height to maintain aspect ratio */
+  }
+}
+
+@media (max-width: 480px) { /* Mobile phones */
+  #bg-video {
+    width: 100%;             /* Full width for mobile */
+    height: 100%;            /* Full height to maintain aspect ratio */
+  }
+}
+
+@media (max-width: 400px) { /* Very small screens */
+  #bg-video {
+    width: 100%;             /* Full width for very small screens */
+    height: 100%;            /* Full height to maintain aspect ratio */
+  }
+}
+
 
 /*about us*/
 * {
