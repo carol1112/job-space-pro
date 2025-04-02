@@ -87,6 +87,24 @@ nav ul li a:hover {
 }
 
 /* Responsive Design for Logo */
+
+@media (min-width: 1024px) and (max-width: 1366px) { /* Laptops */
+  header {
+    padding: 15px 25px;  /* Increase padding for better spacing */
+  }
+
+  .logo img {
+    height: 100px;  /* Adjust logo height for laptops */
+  }
+
+  nav ul {
+    gap: 20px;  /* Increase spacing between nav items */
+  }
+
+  nav ul li a {
+    padding: 12px 15px;  /* Increase padding for better clickability */
+  }
+}
 @media (max-width: 768px) {  /* Mobile and tablet */
   header {
     flex-direction: column;
@@ -182,7 +200,7 @@ body {
   #bg-video {
     width: 70%;         /* Adjust width for better scaling */
     height: 50vh;       /* Set a percentage of viewport height */
-    max-height: 400px;  /* Set a max height to prevent excessive scaling */
+    max-height: 300px;  /* Set a max height to prevent excessive scaling */
   }
 }
 
