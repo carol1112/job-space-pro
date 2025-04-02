@@ -122,7 +122,7 @@ nav ul li a:hover {
 @media (min-width: 769px) and (max-width: 1024px) { 
   /* Logo size for tablet and laptop */
   .logo img {
-    height: 100px;  /* Logo height for tablet/laptop */
+    height: 80px;  /* Logo height for tablet/laptop */
   }
 }
 
@@ -152,7 +152,6 @@ body {
 }
 
 /* Video Section */
-/* Video Section */
 #home {
   display: flex;
   justify-content: center;  /* Centers the video horizontally */
@@ -181,8 +180,8 @@ body {
 /* Responsive Adjustments for Various Screen Sizes */
 @media (min-width: 1024px) and (max-width: 1366px) { /* Laptops */
   #bg-video {
-    width: 80%;         /* Adjust width for better scaling */
-    height: 65vh;       /* Set a percentage of viewport height */
+    width: 70%;         /* Adjust width for better scaling */
+    height: 50vh;       /* Set a percentage of viewport height */
     max-height: 400px;  /* Set a max height to prevent excessive scaling */
   }
 }
