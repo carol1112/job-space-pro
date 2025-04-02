@@ -90,7 +90,7 @@ nav ul li a:hover {
 
 @media (min-width: 1024px) and (max-width: 1366px) { /* Laptops */
   header {
-    padding: 15px 25px;  /* Increase padding for better spacing */
+    padding: 10px 20px;  /* Increase padding for better spacing */
   }
 
   .logo img {
@@ -185,9 +185,9 @@ body {
 
 /* Video Styling */
 #bg-video {
-  width: 100%;
+  width: 70%;
   max-width: 1000px;         /* Max width for desktops */
-  height: 100%;              /* Ensure the video fills the container */
+  height: 50%;              /* Ensure the video fills the container */
   object-fit: cover;         /* Ensure the video maintains aspect ratio */
   border-radius: 10px;       /* Optional rounded corners */
   margin: 0 auto;            /* Centers the video within the container */
