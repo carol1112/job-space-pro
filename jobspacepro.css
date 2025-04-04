@@ -17,6 +17,8 @@ header {
   justify-content: space-between;
   align-items: center;
   background:url(bg2.jpg);
+  background-repeat:no-repeat ;
+  background-size: cover;
   padding: 8px 15px; /* Reduced padding */
   width: 100%;
   position: fixed;
