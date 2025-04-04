@@ -1,246 +1,164 @@
-/* Reset and Base Styles */
+
+
+/*HEADER FIXED*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  background-color: #f4f4f4;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-/* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-image: url(bg2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 8px 15px;
-  width: 100%;
+  padding: 10px 20px;
   position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
-  height: 150px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Logo */
 .logo img {
-  width: 200px;
-  height: 150px;
+  width: auto;
+  height: 150px; /* Default height for desktop/laptop */
 }
 
-/* Menu */
-.menu {
+nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 15px;
 }
 
-.menu li {
+nav ul li {
   position: relative;
 }
 
-.menu li a {
+nav ul li a {
   text-decoration: none;
-  color: black;
-  font-size: 18px;
-  padding: 6px 10px;
+  color: white;
+  padding: 10px;
+  display: block;
   transition: 0.3s;
 }
 
-/* Dropdown */
+nav ul li a:hover {
+  background: #007bff;
+  border-radius: 5px;
+}
+
 .dropdown-menu {
-  list-style: none;
+  display: none;
+  position: absolute;
   top: 100%;
   left: 0;
-  background: green;
+  background: white;
+  list-style: none;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  display: none;
   min-width: 150px;
-  position: absolute;
-  text-align: center;
-  padding: 10px 15px;
-  gap: 15px;
 }
 
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
-.menu li a:hover,
-.dropdown-menu li a:hover {
-  color: red;
-  border-radius: 5px;
-  text-decoration: underline;
+.dropdown-menu li a {
+  color: black;
+  padding: 10px;
+  display: block;
 }
 
-/* Toggle Menu */
 .menu-toggle {
   display: none;
-  font-size: 26px;
   background: none;
   border: none;
+  color: white;
+  font-size: 24px;
   cursor: pointer;
-  color: black;
 }
 
-/* Laptop */
-@media (max-width: 1024px) {
+/* Responsive Design for Logo */
+
+@media (min-width: 1024px) and (max-width: 1366px) { /* Laptops */
   header {
-    height: 70px;
-    padding: 6px 12px;
+    padding: 15px 25px;  /* Increase padding for better spacing */
   }
 
   .logo img {
-    width: 75px;
-    height: 60px;
+    height: 150px;  /* Adjust logo height for laptops */
   }
 
-  .menu li a {
-    font-size: 13px;
-    padding: 5px 8px;
+  nav ul {
+    gap: 20px;  /* Increase spacing between nav items */
+  }
+
+  nav ul li a {
+    padding: 12px 15px;  /* Increase padding for better clickability */
   }
 }
-
-/* Tablet */
-@media (max-width: 768px) {
+@media (max-width: 768px) {  /* Mobile and tablet */
   header {
-    height: 55px;
-    padding: 6px 10px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
+  /* Logo size for mobile and tablet */
   .logo img {
-    width: 70px;
-    height: auto;
-  }
-
-  .menu-toggle {
-    display: block;
+    height: 100px; /* Logo height for mobile/tablet */
   }
 
   .menu {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 55px;
-    left: 0;
     width: 100%;
-    background: green;
-    text-align: center;
+    background: #222;
+    position: absolute;
+    top: 60px;
+    left: 0;
     padding: 10px 0;
-    z-index: 999;
   }
 
   .menu.active {
     display: flex;
   }
 
-  .dropdown-menu {
-    position: static;
-    width: 100%;
-    background: blue;
-  }
-
-  .dropdown-menu li a {
-    padding: 10px;
-    background-color: blue;
-    color: white;
-  }
-
-  .dropdown:hover .dropdown-menu {
+  .menu-toggle {
     display: block;
   }
 }
 
-/* Mobile */
-@media (max-width: 480px) {
-  header {
-    height: 80px;
-    width: 100vw; /* Ensures full viewport width */
-    padding: 0 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
+/* Tablet and Laptop */
+@media (min-width: 769px) and (max-width: 1024px) { 
+  /* Logo size for tablet and laptop */
   .logo img {
-    width: 140px;
-    height: auto;
-  }
-
-  .menu-toggle {
-    display: block;
-    font-size: 28px;
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    z-index: 9999;
-  }
-
-  .menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background: blue;
-    text-align: center;
-    padding: 10px 0;
-    z-index: 999;
-  }
-
-  .menu.active {
-    display: flex;
-  }
-
-  .dropdown-menu {
-    position: static;
-    width: 100%;
-    background: blue;
-  }
-
-  .dropdown-menu li a {
-    padding: 10px;
-    background-color: blue;
-    color: white;
-  }
-
-  .dropdown:hover .dropdown-menu {
-    display: block;
+    height: 120px;  /* Logo height for tablet/laptop */
   }
 }
 
-/* Tablet and above */
-@media (min-width: 769px) {
-  .menu {
+/* Desktop and larger screens */
+@media (min-width: 1025px) {  
+  /* Logo size for desktop and larger screens */
+  .logo img {
+    height: 150px;  /* Logo height for desktop/laptop */
+  }
+
+  nav ul {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
   }
 
   .menu-toggle {
     display: none;
   }
-
-  .dropdown-menu {
-    display: none;
-  }
-
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
 }
-
 /* General Styles */
 body {
   font-family: Arial, sans-serif;
@@ -252,6 +170,19 @@ body {
 }
 
 /* Video Section */
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: white;
+  padding: 10px;
+  overflow: hidden;
+  margin-top: 60px;
+  position: relative;
+  z-index: 1;
+}
+
  /* Video Section */
 
     
@@ -261,7 +192,7 @@ body {
   justify-content: center; /* Centers the video horizontally */
   align-items: center;     /* Centers the video vertically */
   min-height: 100vh;       /* Full screen height */
-  background: white;
+  background: #060606;
   padding: 10px;
   overflow: hidden;        /* Prevent unwanted scrollbars */
   position: relative;
@@ -283,7 +214,7 @@ body {
 @media (max-width: 1440px) {  /* Larger laptops */
   #bg-video {
       width: 75%;
-      max-height: 340px;
+      max-height: 380px;
   }
 }
 
@@ -667,8 +598,8 @@ body {
  
 
 
-/* Global Styles */
-/* Base Reset */
+/*WHY CHOOSE JOB SPACE PRO*/
+
 * {
   margin: 0;
   padding: 0;
@@ -676,16 +607,14 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
-/* Section Styles */
 .why-choose-section {
-  background-color: hsl(212, 83%, 5%);
   padding: 80px 20px;
+  background-color:hsl(212, 83%, 5%);
 }
 
 .container2 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .section-heading {
@@ -699,14 +628,12 @@ body {
   margin-bottom: 15px;
 }
 
-/* Grid Layout */
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
-/* Card Styles */
 .benefit-card1 {
   background: white;
   padding: 30px;
@@ -719,7 +646,6 @@ body {
   transform: translateY(-5px);
 }
 
-/* Card Content */
 .benefit-icon {
   font-size: 32px;
   margin-bottom: 20px;
@@ -756,136 +682,18 @@ body {
   font-weight: bold;
 }
 
-/* Responsive Design */
-
-/* Mobile Phones */
-@media (max-width: 480px) {
-  .why-choose-section {
-    padding: 60px 10px;
-  }
-
-  .container2 {
-    padding: 0 10px;
-  }
-
-  .section-heading h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  .benefits-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .benefit-card1 {
-    padding: 20px;
-  }
-
-  .benefit-title {
-    font-size: 18px;
-  }
-
-  .benefit-list li {
-    font-size: 14px;
-  }
-}
-
-/* Tablets */
 @media (max-width: 768px) {
-  .why-choose-section {
-    padding: 80px 20px;
-  }
-
-  .container2 {
-    padding: 0 20px;
-  }
-
-  .section-heading h2 {
-    font-size: 28px;
-  }
-
   .benefits-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+      grid-template-columns: 1fr;
   }
-
-  .benefit-card1 {
-    padding: 25px;
-  }
-
-  .benefit-title {
-    font-size: 18px;
-  }
-
-  .benefit-list li {
-    font-size: 16px;
+  
+  .section-heading h2 {
+      font-size: 28px;
   }
 }
 
-/* Laptops */
-@media (max-width: 1024px) {
-  .why-choose-section {
-    padding: 90px 20px;
-  }
 
-  .container2 {
-    padding: 0 30px;
-  }
 
-  .section-heading h2 {
-    font-size: 32px;
-  }
-
-  .benefits-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 25px;
-  }
-
-  .benefit-card1 {
-    padding: 28px;
-  }
-
-  .benefit-title {
-    font-size: 19px;
-  }
-
-  .benefit-list li {
-    font-size: 15px;
-  }
-}
-
-/* Desktops */
-@media (min-width: 1200px) {
-  .why-choose-section {
-    padding: 100px 20px;
-  }
-
-  .container2 {
-    padding: 0 40px;
-  }
-
-  .section-heading h2 {
-    font-size: 36px;
-  }
-
-  .benefits-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-  }
-
-  .benefit-card1 {
-    padding: 30px;
-  }
-
-  .benefit-title {
-    font-size: 20px;
-  }
-
-  .benefit-list li {
-    font-size: 16px;
-  }
-}
 /*apply*/ 
 
 #apply {
