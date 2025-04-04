@@ -619,6 +619,7 @@ body {
 
 
 /* Global Styles */
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -626,6 +627,7 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
+/* Section Styles */
 .why-choose-section {
   background-color: hsl(212, 83%, 5%);
   padding: 80px 20px;
@@ -648,12 +650,14 @@ body {
   margin-bottom: 15px;
 }
 
+/* Grid Layout */
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
+/* Card Styles */
 .benefit-card1 {
   background: white;
   padding: 30px;
@@ -666,6 +670,7 @@ body {
   transform: translateY(-5px);
 }
 
+/* Card Content */
 .benefit-icon {
   font-size: 32px;
   margin-bottom: 20px;
@@ -832,7 +837,6 @@ body {
     font-size: 16px;
   }
 }
-
 /*apply*/ 
 
 #apply {
