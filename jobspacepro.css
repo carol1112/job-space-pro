@@ -1,162 +1,195 @@
 
 
-/*HEADER FIXED*/
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
 body {
-  color: white;
-  text-align: center;
-  padding: 20px;
+  background-color: #f4f4f4;
+  
 }
 
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: url(bg2.jpg);
-  padding: 10px 20px;
-  position: fixed;
+ background-image: url(bg2.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+  padding: 8px 15px; /* Reduced padding */
   width: 100%;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
+  height: 150px; /* Decreased height */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Logo */
 .logo img {
-  width: auto;
-  height: 150px; /* Default height for desktop/laptop */
+  width: 200px;  /* Smaller logo */
+  height: 150px;
 }
 
-nav ul {
+/* Menu */
+.menu {
   list-style: none;
   display: flex;
-  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Adjusted gap */
 }
 
-nav ul li {
+.menu li {
   position: relative;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  padding: 10px;
-  display: block;
+.menu li a {
+  text-decoration:none; 
+  color:black;
+  font-size: 18px; /* Slightly smaller text */
+  padding: 6px 10px; /* Adjusted padding */
   transition: 0.3s;
 }
 
-nav ul li a:hover {
-  background: #007bff;
-  border-radius: 5px;
-}
-
+/* Dropdown */
 .dropdown-menu {
-  display: none;
-  position: absolute;
+  list-style: none;
   top: 100%;
   left: 0;
-  background: white;
-  list-style: none;
+  background:green;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  min-width: 150px;
+  display: none;
+  min-width: 150px; /* Adjusted width */
+  position: absolute;
+  text-align: center;
+  padding: 10px 15px;
+  gap: 15px;
 }
 
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
-.dropdown-menu li a {
-  color: black;
-  padding: 10px;
-  display: block;
+.menu li a:hover, .dropdown-menu li a:hover {
+  color: red;
+  border-radius: 5px;
+  text-decoration:underline; 
 }
 
+/* Toggle Menu */
 .menu-toggle {
   display: none;
-  background: none;
-  border: none;
-  color: white;
   font-size: 24px;
+  color:black;
   cursor: pointer;
 }
 
-/* Responsive Design for Logo */
-
-@media (min-width: 1024px) and (max-width: 1366px) { /* Laptops */
+/* Responsive Design */
+@media (max-width: 1024px) { /* Laptops */
   header {
-    padding: 15px 25px;  /* Increase padding for better spacing */
+      height: 70px; /* Reduced header height more */
+      padding: 6px 12px;
   }
 
   .logo img {
-    height: 100px;  /* Adjust logo height for laptops */
+      width: 75px; /* Further reduced logo size */
+      height:60px;
   }
 
-  nav ul {
-    gap: 20px;  /* Increase spacing between nav items */
-  }
-
-  nav ul li a {
-    padding: 12px 15px;  /* Increase padding for better clickability */
+  .menu li a {
+      font-size: 13px; /* Adjusted font size */
+      padding: 5px 8px;
   }
 }
-@media (max-width: 768px) {  /* Mobile and tablet */
+
+@media (max-width: 768px) { /* Tablets and small screens */
   header {
-    flex-direction: column;
-    align-items: flex-start;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 55px; /* Smaller header for tablets */
+      padding: 6px 10px;
   }
 
-  /* Logo size for mobile and tablet */
   .logo img {
-    height: 100px; /* Logo height for mobile/tablet */
+      width: 70px; /* Smaller logo */
+  }
+
+  .menu-toggle {
+      display: block;
   }
 
   .menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #222;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    padding: 10px 0;
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background:green;
+      text-align: center;
+      padding: 10px 0;
   }
 
   .menu.active {
-    display: flex;
+      display: flex;
   }
 
-  .menu-toggle {
-    display: block;
+  /* Dropdown for Mobile */
+  .dropdown-menu {
+      position: static;
+      width: 100%;
+  }
+
+  .dropdown-menu li a {
+      padding: 10px;
+      background-color:green;
+      color: white;
+  }
+
+  .dropdown:hover .dropdown-menu {
+      display: block;
   }
 }
 
-/* Tablet and Laptop */
-@media (min-width: 769px) and (max-width: 1024px) { 
-  /* Logo size for tablet and laptop */
+/* Mobile Screens */
+@media (max-width: 480px) {
+  header {
+      height: 100px; /* Reduced header for mobile */
+  }
+
   .logo img {
-    height: 80px;  /* Logo height for tablet/laptop */
+      width: 150px; /* Smaller logo */
+      height:80px;
   }
 }
 
-/* Desktop and larger screens */
-@media (min-width: 1025px) {  
-  /* Logo size for desktop and larger screens */
-  .logo img {
-    height: 120px;  /* Logo height for desktop/laptop */
-  }
-
-  nav ul {
-    display: flex;
+/* Tablet and larger screens */
+@media (min-width: 769px) {
+  .menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
   }
 
   .menu-toggle {
-    display: none;
+      display: none;
+  }
+
+  .dropdown-menu {
+      display: none;
+  }
+
+  .dropdown:hover .dropdown-menu {
+      display: block;
   }
 }
 /* General Styles */
@@ -170,78 +203,66 @@ body {
 }
 
 /* Video Section */
+ /* Video Section */
+
+    
+/* Home Section Styling */
 #home {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: white;
+  justify-content: center; /* Centers the video horizontally */
+  align-items: center;     /* Centers the video vertically */
+  min-height: 100vh;       /* Full screen height */
+  background: #060606;
   padding: 10px;
-  overflow: hidden;
-  margin-top: 60px;
+  overflow: hidden;        /* Prevent unwanted scrollbars */
   position: relative;
-  z-index: 1;
 }
 
 /* Video Styling */
 #bg-video {
-  width: 60%;            /* Reduce size but keep aspect ratio */
-  height: auto;          /* Maintain aspect ratio */
-  max-width: 800px;      /* Set max width to avoid large scaling */
-  max-height: 450px;     /* Set max height to avoid excessive height */
-  object-fit: contain;   /* Keep full video visible without cropping */
-  border-radius: 10px;   /* Optional rounded corners */
-  margin: 0 auto;
+  width: 80%;              /* Reduced width for laptops */
+  height: auto;            /* Maintain aspect ratio */
+  max-width: 900px;        /* Limit width on larger screens */
+  max-height: 500px;       /* Adjust height to prevent overflow */
+  object-fit: cover;       /* Ensure video fills the container */
+  border-radius: 10px;     /* Optional rounded corners */
+  margin: 0 auto;          /* Centers the video within the container */
   position: relative;
-  z-index: 1;
-}  
+}
 
-/* Responsive Adjustments for Laptops (1366px screens) */
-@media (min-width: 1024px) and (max-width: 1366px) { 
+/* Responsive Adjustments */
+@media (max-width: 1440px) {  /* Larger laptops */
   #bg-video {
-    width: 50%;         /* Reduce size more for laptops */
-    max-width: 700px;   /* Limit max width */
-    max-height: 400px;  /* Keep proportional height */
+      width: 75%;
+      max-height: 380px;
   }
 }
 
-/* Tablets */
-@media (max-width: 768px) { 
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .logo img {
-    height: 100px;
-  }
-
+@media (max-width: 1024px) {  /* Standard laptops & tablets */
   #bg-video {
-    width: 70%;
-    max-width: 600px;
-    max-height: 350px;
+      width: 70%;  /* Reduce width */
+      max-height: 350px;
   }
 }
 
-/* Mobile */
-@media (max-width: 480px) { 
-  .logo img {
-    height: 80px;
-  }
-
+@media (max-width: 768px) {   /* Small tablets & larger smartphones */
   #bg-video {
-    width: 90%;
-    max-width: 400px;
-    max-height: 250px;
+      width: 90%;
+      max-height: 350px;
   }
 }
 
-/* Very Small Screens */
-@media (max-width: 400px) { 
+@media (max-width: 480px) {   /* Mobile phones */
   #bg-video {
-    width: 95%;
-    max-width: 350px;
-    max-height: 200px;
+      width: 95%;
+      max-height: 300px;
+  }
+}
+
+@media (max-width: 400px) {   /* Very small screens */
+  #bg-video {
+      width: 100%;
+      max-height: 250px;
   }
 }
 /*about us*/
