@@ -212,7 +212,7 @@ body {
   justify-content: center; /* Centers the video horizontally */
   align-items: center;     /* Centers the video vertically */
   min-height: 100vh;       /* Full screen height */
-  background: #060606;
+  background: white;
   padding: 10px;
   overflow: hidden;        /* Prevent unwanted scrollbars */
   position: relative;
