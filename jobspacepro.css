@@ -619,7 +619,6 @@ body {
 
 
 /*WHY CHOOSE JOB SPACE PRO*/
-
 * {
   margin: 0;
   padding: 0;
@@ -628,13 +627,14 @@ body {
 }
 
 .why-choose-section {
-  padding: 80px 20px;
-  background-color:hsl(212, 83%, 5%);
+  background-color: hsl(212, 83%, 5%);
+  padding: 100px 20px;
 }
 
 .container2 {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px; /* Added padding for container */
 }
 
 .section-heading {
@@ -702,16 +702,139 @@ body {
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
-  .benefits-grid {
-      grid-template-columns: 1fr;
+/* Responsive Design */
+
+/* Mobile Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .why-choose-section {
+    padding: 60px 10px;
   }
-  
+
+  .container2 {
+    padding: 0 10px; /* Reduced padding for mobile */
+  }
+
   .section-heading h2 {
-      font-size: 28px;
+    font-size: 24px; /* Adjusted header size */
+    margin-bottom: 10px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 15px;
+  }
+
+  .benefit-card1 {
+    padding: 20px; /* Reduced padding inside cards */
+  }
+
+  .benefit-title {
+    font-size: 18px; /* Adjusted font size for titles */
+  }
+
+  .benefit-list li {
+    font-size: 14px; /* Smaller font size for list items */
   }
 }
 
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .why-choose-section {
+    padding: 80px 20px;
+  }
+
+  .container2 {
+    padding: 0 20px; /* Padding for tablet */
+  }
+
+  .section-heading h2 {
+    font-size: 28px; /* Adjusted header size */
+    margin-bottom: 15px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr 1fr; /* Two columns for tablets */
+    gap: 20px;
+  }
+
+  .benefit-card1 {
+    padding: 25px; /* Slightly reduced padding for tablet screens */
+  }
+
+  .benefit-title {
+    font-size: 18px; /* Adjusted font size for titles */
+  }
+
+  .benefit-list li {
+    font-size: 16px; /* Adjusted font size for list items */
+  }
+}
+
+/* Laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .why-choose-section {
+    padding: 70px 20px;
+  }
+
+  .container2 {
+    padding: 0 20px; /* Adjust padding for laptops */
+  }
+
+  .section-heading h2 {
+    font-size: 32px; /* Adjusted header size */
+    margin-bottom: 20px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr 1fr 1fr; /* Three columns for laptops */
+    gap: 25px;
+  }
+
+  .benefit-card1 {
+    padding: 28px; /* Slightly adjusted padding for laptop screens */
+  }
+
+  .benefit-title {
+    font-size: 19px; /* Adjusted font size for titles */
+  }
+
+  .benefit-list li {
+    font-size: 15px; /* Adjusted font size for list items */
+  }
+}
+
+/* Desktops (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .why-choose-section {
+    padding: 120px 20px;
+  }
+
+  .container2 {
+    padding: 0 40px; /* Adjust padding for larger screens */
+  }
+
+  .section-heading h2 {
+    font-size: 36px; /* Default header size for desktop */
+    margin-bottom: 30px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+    gap: 30px;
+  }
+
+  .benefit-card1 {
+    padding: 30px; /* Default padding for benefit cards */
+  }
+
+  .benefit-title {
+    font-size: 20px; /* Default title size */
+  }
+
+  .benefit-list li {
+    font-size: 16px; /* Default font size for list items */
+  }
+}
 
 
 /*apply*/ 
