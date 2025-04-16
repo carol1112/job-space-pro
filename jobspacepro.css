@@ -79,6 +79,7 @@ header {
   color: black;
   border-radius: 5px;
   text-decoration:underline; 
+  background-color:green;
 }
 
 /* Toggle Menu */
@@ -87,6 +88,7 @@ header {
   font-size: 24px;
   color:black;
   cursor: pointer;
+  background-color: green;
 }
 
 /* Responsive Design */
