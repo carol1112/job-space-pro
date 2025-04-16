@@ -270,36 +270,11 @@ header {
     display: none;
   }
 }
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0; 
-  color: white; /* White text */
-  text-align: center;
-  
-}
 
-/* Video Section */
-#home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: white;
-  padding: 10px;
-  overflow: hidden;
-  margin-top: 60px;
-  position: relative;
-  z-index: 1;
-}
 
  /* Video Section */
 
-    
-/* Home Section Styling */
-/* Base reset and full viewport sizing */
-html, body {
+ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -313,7 +288,8 @@ html, body {
   height: 100vh;
   padding: 20px;
   box-sizing: border-box;
-  background:white;
+  background:rgb(98, 232, 98);
+  padding-top: 140px;
 }
 
 .video-container {
@@ -330,7 +306,7 @@ html, body {
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  background:white;
+  background: #000;
 }
 
 #bg-video {
@@ -356,15 +332,13 @@ html, body {
 @media (min-width: 992px) and (max-width: 1199px) {
   #home {
       height: 100vh;
-      padding-top: 0px; /* Minimal top spacing */
+      padding-top: 120px; /* Minimal top spacing */
       padding-bottom: 20px;
-    
   }
   .video-container {
       max-width: 500px; /* Even more compact */
       width: 80%; /* Takes less horizontal space */
       margin: auto; /* Perfect centering */
-     
   }
   .video-wrapper {
       padding-bottom: 50%; /* Slightly wider aspect ratio */
@@ -429,7 +403,8 @@ html, body {
   .video-wrapper {
       padding-bottom: 50%;
   }
-}
+} 
+
 /*about us*/
 * {
   margin: 0;
