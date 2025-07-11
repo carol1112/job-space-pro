@@ -1,177 +1,1189 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Application Form</title>
-    <style>
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #00c6ff, #0072ff);
-        }
-
-        /* Container Styling */
-        .container {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
-            color: white;
-            animation: fadeIn 0.8s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        h2 {
-            margin-bottom: 15px;
-            font-size: 24px;
-            font-weight: 600;
-        }
-
-        /* Form Styling */
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-
-        input, textarea {
-            background: rgba(255, 255, 255, 0.3);
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-        }
-
-        input::placeholder, textarea::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        input:focus, textarea:focus {
-            background: rgba(255, 255, 255, 0.6);
-            outline: none;
-            color: #000;
-        }
-
-        textarea {
-            resize: none;
-        }
-
-        /* Submit Button */
-        #sub {
-            background: #ff5e57;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 18px;
-            font-weight: bold;
-            transition: 0.3s ease;
-        }
-
-        #sub:hover {
-            background: #ff3b3b;
-            transform: scale(1.05);
-        }
-
-        #sub:disabled {
-            background: gray;
-            cursor: not-allowed;
-        }
-
-        /* Message Display */
-        #msg {
-            margin-top: 15px;
-            font-size: 16px;
-            font-weight: bold;
-            transition: 0.3s ease-in-out;
-        }
-
-        /* Responsive */
-        @media (max-width: 480px) {
-            .container {
-                width: 90%;
-                padding: 20px;
-            }
-        }
-    </style>
+    <title>Home Base Crew</title>
+    <link rel="stylesheet" href="homebasecrew.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   
+    
 </head>
 <body>
 
-    <div class="container">
-        <h2>Apply for a Job</h2>
-        <h1 id="msg"></h1>
-        <form id="jobForm" enctype="multipart/form-data">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="tel" name="phone" placeholder="Phone Number" required>
-            <input type="text" name="address" placeholder="Address" required>
-            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-            <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
-            <input type="submit" id="sub" value="Submit">
-        </form>
+    <!-- Fixed Header Navigation --> 
+  <header>
+    <div class="logo">
+        <img src="homebasecrew logo.png" alt="Home Base Crew Logo"> 
+        
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav>
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="homebasecrew about.html">About ▾</a>
+                <ul class="dropdown-menu">
+                  
+                    <li><a href="homebasecrew faqs.html">FAQs</a></li>
+                </ul>
+            </li>
+            <li><a href="homebasecrew service.html">Skills Needed</a></li>
+            <li class="dropdown">
+                <a href="homebasecrew why choose us.html">Why Choose Us ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="homebasecrew benefits.html">Benefits</a></li>
+                    <li><a href="homebasecrew testimonial.html">Testimonials</a></li>
+                </ul>
+            </li>
+            <li><a href="homebasecrew contact.html">Apply Now</a></li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    function toggleMenu() {
+        document.querySelector('.menu').classList.toggle('active');
+    }
+</script>
+<style>
+        hr {
+            border: none; /* Remove default border */
+            height: 6px; /* Set height */
+            background: greenyellow; /* Solid color */
+            border-radius: 3px; /* Rounded ends */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+            margin: 150px 0 30px 0; /* Add spacing */
+        }
+        </style> 
+  
+    <!--video play-->
+   <hr>
+    <section id="home">
+        
+        <div class="video-container">
+            <div class="video-wrapper">
+                <video id="bg-video" playsinline autoplay loop controls>
+                    <source src="homebasecrew video ads 1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+      
+  <hr>
+<!-- home Introduction Section -->  
+<section id="home1">
+
+     <h1><strong>About Home Base Crew</strong></h1>
+     <p>www.homebasecrew.com</p>
+     <p>At <strong>Home Base Crew</strong>, we specialize in <strong>connecting businesses with top-tier remote professionals</strong> worldwide. As a <strong>leading remote staffing recruitment agency</strong>, we help companies build efficient and highly skilled remote teams while providing job seekers with <strong>legitimate and flexible work-from-home opportunities</strong>. Our mission is to bridge the gap between employers and global talent by offering a seamless hiring experience.</p>
+     
+     <p>We understand the <strong>growing demand for remote work</strong> and the challenges that come with it. That’s why <strong>Home Base Crew</strong> ensures that every candidate goes through a <strong>thorough vetting process</strong> to match the right professionals with the right companies. Whether you need <strong>virtual assistants, customer support agents, IT experts, or content creators</strong>, we provide the best remote staffing solutions tailored to your business needs.</p>
+     
+     <p>With <strong>Home Base Crew</strong>, companies can scale their workforce <strong>cost-effectively and efficiently</strong>, while job seekers can find remote jobs that offer flexibility, stability, and career growth. Join us in shaping the <strong>future of remote work</strong>, where talent knows no borders, and businesses thrive in a digital-first world.</p>
+ </section>
+
+ <section id="about">
+    <div class="containerabout">
+        <h1><strong>About Us</strong></h1>
+        <div class="content-wrapper">
+            <div class="image-container">
+                <img src="workhome4.png" alt="HomeBase Crew Logo" class="zoom-img">
+            </div>
+            <div class="text-container">
+                <p><strong>Home Base Crew</strong> is dedicated to connecting job seekers with their dream jobs.</p>
+                <p><strong>Home Base Crew</strong>—your gateway to building and joining exceptional remote teams. As a premier recruitment agency specializing in remote and work-from-home opportunities, we connect forward-thinking businesses with top-tier talent worldwide, ensuring seamless matches that drive success.</p>
+                <p>At <strong>Home Base Crew</strong>, we prioritize more than just placements. We champion benefits that matter: flexibility to design your ideal workday, competitive salaries, wellness programs, and ongoing professional development. For companies, we streamline hiring to secure skilled professionals who thrive in remote environments, boosting productivity and innovation.</p>
+                <p>Whether you’re a business seeking dedicated remote staff or a professional chasing the freedom of work-from-home life, Home Base Crew is here to redefine your journey. Let’s shape the future of work—together.</p>
+            </div>
+        </div>
+    </div>
+</section>
+ <hr>
+  <section id="jobs">
+  <h1><strong>Job Listings</strong></h1>
+  <p>Browse our extensive list of job opportunities.</p>
+
+<ul>
+<h2><strong>Administrative and Support Roles</strong></h2>
+ <p>Administrative Assistant</p>
+  <p>Call Center</p>
+  <p>Chat Support</p>
+  <p>Live Chat</p>
+  <p>Recruiter</p>
+  <p>Transcription</p>
+  <p>Typing</p>
+<h2><strong>Analytical and Technical Roles</strong></h2>
+  <p>Analyst</p>
+  <p>Data Analyst</p>
+  <p>Data Science</p>
+  <p>Cybersecurity</p>
+  <p>Software Engineering</p>
+  <p>QA (Quality Assurance)</p>
+<h2><strong>and Design Roles</strong></h2>
+  <p>Copywriting</p>
+  <p>Creative</p>
+  <p>Design</p>
+  <p>Graphic Design</p>
+  <p>UI & UX (User Interface & User Experience)</p>
+  <p>Video Editing</p>
+  <p>Writing</p>
+<h2><strong>Finance and Compliance Roles</strong></h2>
+  <p>Bookkeeping</p>
+  <p>Finance</p>
+  <p>Compliance</p>
+<h2><strong>Human Services and Healthcare Roles</strong></h2>
+  <p>Healthcare</p>
+  <p>Nursing (RN)</p>
+  <p>Life Coach</p>
+  <p>Public Health</p>
+<h2><strong>Education and Training Roles</strong></h2>
+  <p>Education</p>
+  <p>Teaching</p>
+  <p>Training</p>
+  <p>Tutoring</p>
+<h2><strong>Marketing and Communications Roles</strong></h2>
+  <p>Communications</p>
+  <p>Consulting</p>
+  <p>Marketing</p>
+  <p>Social Media</p>
+<h2><strong>Project Management and Operations Roles</strong></h2>
+  <p>Project Management</p>
+  <p>Product Manager</p>
+  <p>Procurement</p>
+      
+</ul>
+<a href="services.html" class="btn">Learn More</a>
+</section>
+
+
+
+
+   <!-- Benefit 1 -->
+<hr>
+<section id="benefits">
+    <div class="section-heading">
+    <h2>Work from Home Benefits</h2>
+</div>
+<div class="benefits-carousel">
+    <div class="carousel-track">
+        
+        <!-- Benefit 1 -->
+
+        <div class="benefit-card">
+            <div class="benefit-icon">🌟</div>
+            <h3 class="benefit-title">1. Work-Life Flexibility</h3>
+            <ul class="benefit-list">
+                <li>-Customizable schedules for productivity peaks</li>
+                <li>-Location independence (home, cafes, traveling)</li>
+                <li>-No daily commute (save 1-2+ hours daily)</li>
+            </ul>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="benefit-card">
+            <div class="benefit-icon">💸</div>
+            <h3 class="benefit-title">2. Financial Savings</h3>
+            <ul class="benefit-list">
+                <li>-Reduced transportation & meal costs</li>
+                <li>-Potential home office tax deductions</li>
+                <li>-Lower relocation/stress costs</li>
+            </ul>
+        </div>
+    
+      <!-- Career Card 3-->
+        <div class="benefit-card">
+        <div class="benefit-icon">🚀</div>
+        <h3 class="benefit-title">3.Career Growth</h3>
+       <ul class="benefit-list">
+          <li>-Global opportunities</li>
+          <li>-Skill development</li>
+          <li>-Cross-cultural exposure</li>
+       </ul>
+   </div>
+        
+
+        <!-- Benefit 4-->
+        <div class="benefit-card">
+            <div class="benefit-icon">🚫🚗</div>
+            <h3 class="benefit-title">4.No Commute Costs</h3>
+            <ul class="benefit-list">
+                <li>-Save on transportation & meals</li>
+                <li>-Reclaim personal time</li>
+            </ul>
+        </div>
+     <!-- Benefit 5 -->
+        <div class="benefit-card">
+            <div class="benefit-icon">🛡️</div>
+            <h3 class="benefit-title">5.Safety & Comfort</h3>
+            <ul class="benefit-list">
+                <li>-Controlled environment</li>
+                <li>-Custom workspace setup</li>
+                <li>-Healthier work conditions</li>
+            </ul>
+        </div>
+
+          <!-- Family Card 6-->
+          <div class="benefit-card">
+            <div class="benefit-icon">👨👩👧👦</div>
+            <h3 class="benefit-title">6.Family Time</h3>
+            <ul class="benefit-list">
+                <li>-Better childcare options</li>
+                <li>-Elder/pet care flexibility</li>
+                <li>-Work-life integration</li>
+            </ul>
+        </div>
+         <!-- Health Card 7-->
+         <div class="benefit-card">
+            <div class="benefit-icon">🧘</div>
+            <h3 class="benefit-title">7.Health & Wellness</h3>
+            <ul class="benefit-list">
+                <li>-Reduced stress levels</li>
+                <li>-Time for exercise</li>
+                <li>-Better mental health</li>
+            </ul>
+        </div>
+        <!-- Productivity Card 8 -->
+        <div class="benefit-card">
+            <div class="benefit-icon">📈</div>
+            <h3 class="benefit-title">8.Increased Productivity</h3>
+            <ul class="benefit-list">
+                <li>-Fewer office distractions</li>
+                <li>-Personalized workspace</li>
+                <li>-Flexible work hours</li>
+            </ul>
+        </div>
+
     </div>
 
-    <script>
-        document.querySelector("#jobForm").addEventListener("submit", async (e) => {
+    <button class="carousel-button prev">❮</button>
+    <button class="carousel-button next">❯</button>
+    
+    <div class="carousel-indicators">
+        <div class="indicator active"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
+       
+    </div>
+</div>
+
+<script>
+    const track = document.querySelector('.carousel-track');
+    const cards = document.querySelectorAll('.benefit-card');
+    const indicators = document.querySelectorAll('.indicator');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    
+    let currentIndex = 0;
+    const cardWidth = cards[0].offsetWidth;
+
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    nextButton.addEventListener('click', () => {
+        if(currentIndex < cards.length - 1) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+
+    prevButton.addEventListener('click', () => {
+        if(currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel();
+        });
+    });
+
+    // Auto-advance every 7 seconds
+    setInterval(() => {
+        if(currentIndex < cards.length - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        updateCarousel();
+    }, 2000);
+</script>
+</section>
+<hr>
+<section id="why choose" class="why-choose-section">
+        <div class="container2">
+            <div class="section-heading">
+                <h2>Why Choose Home Base Crew?</h2>
+            </div>
+            
+            <div class="benefits-grid">
+                <!-- Benefit 1 -->
+                <div class="benefit-card1">
+                    <div class="benefit-icon">🌍</div>
+                    <h3 class="benefit-title">Access to Global Opportunities</h3>
+                    <ul class="benefit-list">
+                        <li>Work with international companies without relocating</li>
+                        <li>Explore roles in industries/regions unavailable locally</li>
+                    </ul>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="benefit-card1">
+                    <div class="benefit-icon">⏰</div>
+                    <h3 class="benefit-title">Flexible Work Arrangements</h3>
+                    <ul class="benefit-list">
+                        <li>Choose part-time, freelance, or full-time roles</li>
+                        <li>Prioritize work-life balance with location independence</li>
+                    </ul>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="benefit-card1">
+                    <div class="benefit-icon">📈</div>
+                    <h3 class="benefit-title">Career Growth Support</h3>
+                    <ul class="benefit-list">
+                        <li>Training, certifications, and upskilling programs</li>
+                        <li>Exposure to cutting-edge tools and global projects</li>
+                    </ul>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="benefit-card1">
+                    <div class="benefit-icon">🔍</div>
+                    <h3 class="benefit-title">Pre-Vetted Employers</h3>
+                    <ul class="benefit-list">
+                        <li>Verified companies with fair practices</li>
+                        <li>Trusted organizations that value remote talent</li>
+                    </ul>
+                </div>
+
+                <!-- Benefit 5 -->
+                <div class="benefit-card1">
+                    <div class="benefit-icon">🚀</div>
+                    <h3 class="benefit-title">Streamlined Job Search</h3>
+                    <ul class="benefit-list">
+                        <li>Skill-aligned role matching</li>
+                        <li>Priority access to hidden opportunities</li>
+                    </ul>
+                </div>
+
+                <!-- Benefit 6 -->
+                <div class="benefit-card1">
+                    <div class="benefit-icon">💰</div>
+                    <h3 class="benefit-title">Competitive Compensation</h3>
+                    <ul class="benefit-list">
+                        <li>Global standard salaries</li>
+                        <li>Transparent payment structures</li>
+                    </ul>
+                </div>
+
+                <!-- Benefit 7 -->
+                <div class="benefit-card1">
+                    <div class="benefit-icon">😌</div>
+                    <h3 class="benefit-title">Reduced Job Search Stress</h3>
+                    <ul class="benefit-list">
+                        <li>Recruiter support for interviews</li>
+                        <li>No more cold applications</li>
+                    </ul>
+                </div>
+
+                <!-- Benefit 8 -->
+                <div class="benefit-card1">
+                    <div class="benefit-icon">🤝</div>
+                    <h3 class="benefit-title">Community & Networking</h3>
+                    <ul class="benefit-list">
+                        <li>Professional collaboration network</li>
+                        <li>Virtual events & webinars</li>
+                    </ul>
+                </div>
+
+                <!-- Benefit 9 -->
+                <div class="benefit-card1">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3 class="benefit-title">Long-Term Career Stability</h3>
+                    <ul class="benefit-list">
+                        <li>Permanent roles with reputable companies</li>
+                        <li>Freelance to full-time transitions</li>
+                    </ul>
+                </div>
+
+               
+            </div>
+        </div>
+    </section>
+ 
+<hr>
+<section id="about-applicants">
+    <h1><strong>Work from Anywhere with Home Base Crew</strong></h1>
+    <p>At <strong>Home Base Crew</strong>, we connect talented professionals like you with <strong>top remote job opportunities</strong> worldwide.</p>
+    <p>Whether you're looking for <strong>flexibility, career growth, or work-life balance</strong>, we help you find <strong>legitimate, high-paying remote jobs</strong> with trusted companies.</p>
+</section>
+
+
+ <!-- How to Apply -->
+ <section id="apply">
+    <h2><strong>How to Apply?</strong></h2>
+    <ol>
+      <p>️⃣ <strong>Browse Remote Jobs</strong> – Explore open positions that match your skills.</p>
+      <p>️⃣ <strong>Submit Your Application</strong> – Fill out our online application form.</p>
+      <p>️⃣ <strong>Get Matched & Hired</strong> – Our team connects you with the right employer.</p>
+      <p>️⃣ <strong>Start Your Remote Career!</strong> – Work from home and enjoy a flexible job.</p>
+    </ol>
+</section>
+</section>
+  <section class="cta-section">
+  <div class="cta-container">
+    <h2 class="cta-heading">Ready to Start Your Work-from-Home Journey?</h2>
+    <p class="cta-text">Call us now to apply and get matched with the perfect remote job!</p>
+    <a href="tel:09667711591" class="cta-button"><strong>📞 Call 0966 771 1591</strong></a>
+    <p><strong>www.homebasecrew.com</strong></p>
+  </div>
+</section>
+
+  <!--google sheet -->
+  <section id="sheetform">
+    <div class="container">
+      <div class="form-header">
+        <h2>KICK START YOUR CAREER</h2>
+        <h1>Interested in working together? Fill out some info and we will be with you every step of the way! We can't wait to hear from you!</h1>
+      </div>
+  
+      <!-- Message Container -->
+      <div id="msg"></div>
+  
+      <!-- Form Container -->
+      <form id="jobForm">
+        <input type="hidden" name="formType" value="jobApplication">
+        
+        <div class="input-group">
+          <input type="text" name="name" id="nameInput" placeholder=" " required>
+          <label for="nameInput">Full Name</label>
+        </div>
+  
+        <div class="input-group">
+          <input type="email" name="email" id="emailInput" placeholder=" " required>
+          <label for="emailInput">Email Address</label>
+        </div>
+  
+        <div class="input-group">
+          <input type="tel" name="phone" id="phoneInput" placeholder=" " required>
+          <label for="phoneInput">Phone Number</label>
+        </div>
+  
+        <div class="input-group">
+          <input type="text" name="address" id="addressInput" placeholder=" " required>
+          <label for="addressInput">Mailing Address</label>
+        </div>
+  
+        <div class="input-group">
+          <input type="text" name="job" id="jobInput" placeholder=" " required>
+          <label for="jobInput">Job Interested</label>
+        </div>
+  
+        <div class="input-group">
+          <textarea name="message" id="messageInput" placeholder=" " rows="5" required></textarea>
+          <label for="messageInput">Your Message</label>
+        </div>
+  
+        <button type="submit"><strong>Submit</strong></button>
+        <img src="homebasecrew qr code.png" alt="Home Base Crew QR Code" class="qr-code1">
+       
+    </div>
+      </form>
+    </div>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzcvz4RB2VqYAAMjLoCQFh7vySLHKwMx5xFQszALRx7ie6QqNob6kl3jglK0h08F6q3Ww/exec';
+    
+    document.getElementById('jobForm').addEventListener('submit', async (e) => {
     e.preventDefault();
-    let form = e.target;
-    let submitButton = document.querySelector("#sub");
-    let messageDiv = document.querySelector("#msg");
-
-    submitButton.textContent = "Submitting...";
-    submitButton.disabled = true;
-
-    let formData = new FormData(form);
-
+    const form = e.target;
+    const msgDiv = document.getElementById('msg');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    
+    submitBtn.innerHTML = '<div class="spinner"></div> Sending...';
+    submitBtn.disabled = true;
+    msgDiv.classList.remove('success', 'error', 'show'); // Reset message state
+    
     try {
-        let response = await fetch("https://script.google.com/macros/s/AKfycbxLFvAj9mHX0RalOXoczq-hu2JUTvXCB1aMusFIlOHYm2xdjiUkcv7HEnF-V8TQwGAGtw/exec", {
-            method: "POST",
+        const formData = new URLSearchParams(new FormData(form));
+        
+        const response = await fetch(scriptURL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: formData
         });
-
-        let result = await response.json();
-        console.log("Server Response:", result);
-
-        if (result.status === "Success") {
-            messageDiv.innerHTML = "✅ Success! Your application has been submitted.";
-            messageDiv.style.color = "lightgreen";
+    
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        
+        const result = await response.json();
+        
+        if (result.status === "success") {
             form.reset();
+            msgDiv.textContent = '✅ Application Submitted Successfully!';
+            msgDiv.classList.add('success', 'show'); // Add 'show' class
         } else {
-            messageDiv.innerHTML = "❌ Error! " + result.message;
-            messageDiv.style.color = "red";
+            throw new Error(result.message || 'Submission failed');
         }
     } catch (error) {
-        messageDiv.innerHTML = "❌ Error submitting form. Please try again.";
-        messageDiv.style.color = "red";
-        console.error("Submission Error:", error);
+        msgDiv.textContent = `❌ Error: ${error.message}`;
+        msgDiv.classList.add('error', 'show'); // Add 'show' class
     } finally {
-        submitButton.textContent = "Submit Application";
-        submitButton.disabled = false;
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        setTimeout(() => {
+            msgDiv.classList.remove('success', 'error', 'show'); // Hide message after 5 seconds
+            msgDiv.textContent = '';
+        }, 5000);
     }
 });
-
     </script>
+</section>   
+<hr>
+     <!-- Image Carousel -->
+     <section class="image-carousel">
+        <div class="image-carousel__container">
+            <div class="image-carousel__slides">
+                <div class="image-carousel__slide">
+                    <img src="jspic1.jpg" alt="Remote team working">
+                </div>
+                <div class="image-carousel__slide">
+                    <img src="REMOTE STAFF2.jpg" alt="Home office setup">
+                </div>
+                <div class="image-carousel__slide">
+                    <img src="REMOTE STAFF3.jpg" alt="Virtual meeting">
+                </div>
+                <div class="image-carousel__slide">
+                    <img src="REMOTE STAFF4.jpg" alt="Collaboration tools">
+                </div>
+                <div class="image-carousel__slide">
+                    <img src="REMOTE STAFF5.jpg" alt="Digital nomad">
+                </div>
+                <div class="image-carousel__slide">
+                    <img src="jspic2.jpg" alt="Remote work benefits">
+                </div>
+                <div class="image-carousel__slide">
+                    <img src="wfh1.png" alt="Remote work benefits">
+                </div>
+                <div class="image-carousel__slide">
+                    <img src="wfh2.png" alt="Remote work benefits">
+                </div>
+                <div class="image-carousel__slide">
+                    <img src="wfh3.png" alt="Remote work benefits">
+                </div>
+                <div class="image-carousel__slide">
+                    <img src="wfh4.png" alt="Remote work benefits">
+                </div>
+            </div>
 
+            <button class="image-carousel__btn image-carousel__prev">❮</button>
+            <button class="image-carousel__btn image-carousel__next">❯</button>
+            
+            <div class="image-carousel__indicators"></div>
+        </div>
+    
+
+    <script>
+        // Image Carousel (Self-contained IIFE)
+        (function() {
+            const container = document.querySelector('.image-carousel__container');
+            if (!container) {
+                console.error('Carousel container not found!');
+                return;
+            }
+
+            const slidesContainer = container.querySelector('.image-carousel__slides');
+            const slides = container.querySelectorAll('.image-carousel__slide');
+            const indicatorsContainer = container.querySelector('.image-carousel__indicators');
+            const prevBtn = container.querySelector('.image-carousel__prev');
+            const nextBtn = container.querySelector('.image-carousel__next');
+
+            if (!slidesContainer || !indicatorsContainer || !prevBtn || !nextBtn) {
+                console.error('Required carousel elements missing!');
+                return;
+            }
+
+            let currentIndex = 0;
+            let autoPlayInterval;
+            let isHovered = false;
+            let isTransitioning = false;
+
+            // Create indicators
+            slides.forEach((_, index) => {
+                const indicator = document.createElement('div');
+                indicator.className = 'image-carousel__indicator';
+                indicator.addEventListener('click', () => !isTransitioning && goToSlide(index));
+                indicatorsContainer.appendChild(indicator);
+            });
+            const indicators = container.querySelectorAll('.image-carousel__indicator');
+            indicators[0]?.classList.add('active');
+
+            // Update carousel position
+            const updateCarousel = () => {
+                isTransitioning = true;
+                slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === currentIndex);
+                });
+                
+                // Reset transition lock after animation
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 500);
+            };
+
+            // Navigation functions
+            const nextSlide = () => {
+                if (isTransitioning) return;
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateCarousel();
+            };
+
+            const prevSlide = () => {
+                if (isTransitioning) return;
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                updateCarousel();
+            };
+
+            const goToSlide = (index) => {
+                if (isTransitioning) return;
+                currentIndex = index;
+                updateCarousel();
+            };
+
+            // Auto-play functionality
+            const startAutoPlay = () => {
+                autoPlayInterval = setInterval(() => {
+                    if (!isHovered && !isTransitioning) {
+                        nextSlide();
+                    }
+                }, 2000);
+            };
+
+            // Event listeners
+            const handleUserInteraction = () => {
+                clearInterval(autoPlayInterval);
+                startAutoPlay();
+            };
+
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                handleUserInteraction();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                handleUserInteraction();
+            });
+
+            container.addEventListener('mouseenter', () => isHovered = true);
+            container.addEventListener('mouseleave', () => isHovered = false);
+
+            // Handle window resize
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    slidesContainer.style.transition = 'none';
+                    updateCarousel();
+                    setTimeout(() => {
+                        slidesContainer.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+                    }, 10);
+                }, 250);
+            });
+
+            // Initialize
+            startAutoPlay();
+            updateCarousel();
+
+            // Cleanup
+            window.addEventListener('beforeunload', () => {
+                clearInterval(autoPlayInterval);
+            });
+        })();
+    </script>
+    </section>
+</section>
+
+ 
+ <hr>
+<section id="job-slider">
+   
+  <h2>Remote / Work at Home Job Opportunities</h2>
+
+  <div class="slide-content active">
+    <h3>Administrative and Support Roles</h3>
+    <ul>
+      <li>Administrative Assistant</li>
+      <li>Call Center</li>
+      <li>Chat Support</li>
+      <li>Live Chat</li>
+      <li>Recruiter</li>
+      <li>Transcription</li>
+      <li>Typing</li>
+    </ul>
+  </div>
+
+  <div class="slide-content">
+    <h3>Analytical and Technical Roles</h3>
+    <ul>
+      <li>Analyst</li>
+      <li>Data Analyst</li>
+      <li>Data Science</li>
+      <li>Cybersecurity</li>
+      <li>Software Engineering</li>
+      <li>QA (Quality Assurance)</li>
+    </ul>
+  </div>
+
+  <div class="slide-content">
+    <h3>Creative and Design Roles</h3>
+    <ul>
+      <li>Copywriting</li>
+      <li>Creative</li>
+      <li>Design</li>
+      <li>Graphic Design</li>
+      <li>UI & UX</li>
+      <li>Video Editing</li>
+      <li>Writing</li>
+    </ul>
+  </div>
+
+  <div class="slide-content">
+    <h3>Finance and Compliance Roles</h3>
+    <ul>
+      <li>Bookkeeping</li>
+      <li>Finance</li>
+      <li>Compliance</li>
+    </ul>
+  </div>
+
+  <div class="slide-content">
+    <h3>Human Services and Healthcare Roles</h3>
+    <ul>
+      <li>Healthcare</li>
+      <li>Nursing (RN)</li>
+      <li>Life Coach</li>
+      <li>Public Health</li>
+    </ul>
+  </div>
+
+  <div class="slide-content">
+    <h3>Education and Training Roles</h3>
+    <ul>
+      <li>Education</li>
+      <li>Teaching</li>
+      <li>Training</li>
+      <li>Tutoring</li>
+    </ul>
+  </div>
+
+  <div class="slide-content">
+    <h3>Marketing and Communications Roles</h3>
+    <ul>
+      <li>Communications</li>
+      <li>Consulting</li>
+      <li>Marketing</li>
+      <li>Social Media</li>
+    </ul>
+  </div>
+
+  <div class="slide-content">
+    <h3>Project Management and Operations Roles</h3>
+    <ul>
+      <li>Project Management</li>
+      <li>Product Manager</li>
+      <li>Procurement</li>
+    </ul>
+    
+  </div>
+  <a href="services.html" class="btn">Learn More</a>
+</section>
+
+<script>
+  const slides = document.querySelectorAll(".slide-content");
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
+    });
+  }
+
+  function nextSlide() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }
+
+  setInterval(nextSlide, 4000); // Change slide every 4 seconds
+</script>
+
+</section>
+
+
+ <!-- FAQS-->
+<hr>  
+<section class="faq-section" id = "FAQS">
+   
+    <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+    <!-- FAQ Item 1 -->
+   <div class="faq-item">
+    <div class="faq-question">
+      <h3>What is Home Base Crew?</h3>
+      <span class="toggle-icon">+</span>
+    </div>
+    <div class="faq-answer">
+      <p>Home Base Crew is a remote staffing agency connecting businesses with pre-vetted global professionals. We specialize in flexible hiring solutions (full-time, part-time, freelance) across industries like tech, marketing, design, and customer support.</p>   </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>How does Home Base Crew find remote talent?</h3>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>We use a rigorous vetting process combining AI-powered screening and human interviews to identify top-tier remote professionals with proven track records in distributed work environments.</p>
+        </div>
+      </div>
+  
+      <!-- FAQ Item 3 -->
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>What industries do you specialize in?</h3>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>We recruit for various digital-first industries including tech, customer support, digital marketing, software development, and virtual project management.</p>
+        </div>
+      </div>
+  
+      <!-- FAQ Item 4 -->
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>How long does the hiring process take?</h3>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Our streamlined process typically matches businesses with qualified candidates within 7-10 business days, depending on role specificity.</p>
+        </div>
+      </div>
+      <!-- FAQ Item 5 -->
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>How do professionals apply to join your platform?</h3>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Apply on our website:.</p>
+              <li>Submit your resume/portfolio</li>
+              <li>Complete skills tests</li>
+              <li>Attend an interview</li>
+              <li>Get matched with opportunities</li>
+          
+           </div>
+      </div>
+      <!-- FAQ Item 6 -->
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>How do you handle time zone differences?</h3>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Our talent pool includes professionals in all major time zones. We match businesses with candidates who align with their preferred working hours.</p>  </div>
+        </div>
+
+
+          <!-- FAQ Item 7-->
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>What benefits do professionals receive?</h3>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+         
+              <p>Competitive global pay</p>
+              <p>Flexible schedules</p>
+              <p>Career development resources</p>
+              <p>Secure payment processing</p>
+          
+           </div>
+      </div>
+      
+
+      <!-- FAQ Item 8-->
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>How do I get started with Home Base Crew?</h3>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+              <h3>For professionals:</h3>
+              <p>1.Create a profile</p>
+              <p>2.Complete vetting</p>
+              <p>3.Access global opportunities</p>
+          
+           </div>
+      </div>
+
+      <!-- Add more FAQ items as needed -->
+    </div>
+    <script>
+document.querySelectorAll('.faq-question').forEach(item => {
+  item.addEventListener('click', () => {
+    const parent = item.parentElement;
+    parent.classList.toggle('active');
+  });
+});
+</script>
+  </section>
+<hr>
+<!-- Testimonial Section -->
+<section id="testimonial">
+    <h2>What Our Agents Say?</h2>
+  
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <p>“Home Base Crew helped me find the perfect remote job. The hiring process was seamless and professional.”</p>
+        <h4>- Naty</h4>
+      </div>
+      <div class="testimonial">
+        <p>“Great experience! The team matched me with a company that perfectly fits my skills.”</p>
+        <h4>- Michael</h4>
+      </div>
+      <div class="testimonial">
+        <p>“Thanks to Home Base Crew, I now work remotely and love the flexibility.”</p>
+        <h4>- Carolyn</h4>
+      </div>
+      <div class="testimonial">
+        <p>“The entire hiring process was smooth, and I got my dream job in just two weeks.”</p>
+        <h4>- Joanne</h4>
+      </div>
+      <div class="testimonial">
+        <p>“Superb experience! The onboarding was easy and stress-free.”</p>
+        <h4>- Jessie</h4>
+      </div>
+      <div class="testimonial">
+        <p>“I finally found work-life balance thanks to my remote job.”</p>
+        <h4>- Annie</h4>
+      </div>
+      <div class="testimonial">
+        <p>“Home Base Crew connected me with a dream remote job that suits my lifestyle.”</p>
+        <h4>- Cassey</h4>
+      </div>
+      <div class="testimonial">
+        <p>“The entire hiring process was smooth and fast.”</p>
+        <h4>- Jay</h4>
+      </div>
+      <div class="testimonial">
+        <p>“I appreciate the professionalism and timely updates throughout the hiring process.”</p>
+        <h4>- Karen</h4>
+      </div>
+      <div class="testimonial">
+        <p>“Working from home has been a game changer—thank you Home Base Crew!”</p>
+        <h4>- Marlon</h4>
+      </div>
+      <div class="testimonial">
+        <p>“I was hired in just two weeks!”</p>
+        <h4>- fredo</h4>
+      </div>
+      <div class="testimonial">
+        <p>“I never imagined remote work could be this fulfilling. Home Base Crew made it happen!”</p>
+        <h4>- Chris </h4>
+      </div>
+      <div class="testimonial">
+       <p>“The job fit my experience perfectly, and the team was extremely helpful.”</p>
+       <h4>- Diane</h4>
+     </div>
+     <div class="testimonial">
+      <p>“Professional, prompt, and effective. They delivered beyond expectations.”</p>
+      <h4>- Sam </h4>
+     </div>
+     <div class="testimonial">
+      <p>“I received multiple offers and found the perfect match thanks to their guidance.”</p>
+      <h4>- Jeffrey</h4>
+     </div>
+     <div class="testimonial">
+      <p>“They provided excellent communication and job opportunities that aligned with my goals.”</p>
+      <h4>- Aira</h4>
+     </div>
+     <div class="testimonial">
+      <p>“I'm finally doing what I love from home, and it's all because of Home Base Crew.”</p>
+      <h4>- Christine</h4>
+    </div>
+    <div class="testimonial">
+     <p>“They helped me take the leap from office work to working at home full time.”</p>
+     <h4>- Jordan</h4>
+    </div>
+    <div class="testimonial">
+     <p>“The staff were supportive and responsive throughout the whole process.”</p>
+     <h4>- Riley</h4>
+    </div>
+    <div class="testimonial">
+     <p>“Quick, efficient, and professional—couldn’t ask for more!”</p>
+     <h4>- Larry</h4>
+    </div>
+    <div class="testimonial">
+     <p>"Home Base Crew lives up to their name—truly a dependable team for remote staffing."</p>
+     <h4>- Sarah</h4>
+    </div>
+    <div class="testimonial">
+     <p>Whether you're an employer or a job seeker, HBC takes care of you every step of the way."</p>
+     <h4>- Mara</h4>
+    </div>
+    <div class="testimonial">
+     <p>"Their professionalism and passion are evident in every interaction."</p>
+     <h4>- Kyle</h4>
+    </div>
+     <div class="testimonial">
+     <p>"They don’t just match skills—they build remote relationships that last."</p>
+     <h4>- John</h4>
+    </div>
+    <div class="testimonial">
+     <p>"What a gem of a company. HBC makes hiring (and working) remotely so simple."</p>
+     <h4>- Eric</h4>
+    </div>
+    <div class="testimonial">
+     <p>"They understand both business needs and human needs. A rare combination!"</p>
+     <h4>- Jayson</h4>
+    </div>
+    <div class="testimonial">
+     <p>"Great communication, professional support, and real opportunities. Highly recommend!"</p>
+     <h4>- Aiza</h4>
+    </div>
+    <div class="testimonial">
+     <p>"They guided me through every step and gave me the confidence to succeed."</p>
+     <h4>- Camille</h4>
+    </div>
+    <div class="testimonial">
+     <p>"HBC opened doors for me I didn’t know were possible. I now work for a company in the U.S. from my home in the Philippines."</p>
+     <h4>- Nica</h4>
+    </div>
+    <div class="testimonial">
+     <p>"As a single parent, remote work has been a blessing. Thank you, HBC!"</p>
+     <h>- Laica</h4>
+    </div>
+    
+  </div>
+  
+    <!-- Navigation Buttons -->
+    <button class="prev" onclick="changeTestimonial(-1)">❮</button>
+    <button class="next" onclick="changeTestimonial(1)">❯</button>
+  
+    <!-- Dots Indicator -->
+    <div class="dots-container">
+     <span class="dot" onclick="goToTestimonial(0)"></span>
+      <span class="dot" onclick="goToTestimonial(1)"></span>
+      <span class="dot" onclick="goToTestimonial(2)"></span>
+      <span class="dot" onclick="goToTestimonial(3)"></span>
+      <span class="dot" onclick="goToTestimonial(4)"></span>
+      <span class="dot" onclick="goToTestimonial(5)"></span>
+      <span class="dot" onclick="goToTestimonial(6)"></span>
+      <span class="dot" onclick="goToTestimonial(7)"></span>
+      <span class="dot" onclick="goToTestimonial(8)"></span>
+      <span class="dot" onclick="goToTestimonial(9)"></span>
+      <span class="dot" onclick="goToTestimonial(10)"></span>
+      <span class="dot" onclick="goToTestimonial(11)"></span>
+      <span class="dot" onclick="goToTestimonial(12)"></span>
+      <span class="dot" onclick="goToTestimonial(13)"></span>
+      <span class="dot" onclick="goToTestimonial(14)"></span>
+      <span class="dot" onclick="goToTestimonial(15)"></span>
+      <span class="dot" onclick="goToTestimonial(16)"></span>
+      <span class="dot" onclick="goToTestimonial(17)"></span>
+      <span class="dot" onclick="goToTestimonial(18)"></span>
+      <span class="dot" onclick="goToTestimonial(19)"></span>
+      <span class="dot" onclick="goToTestimonial(20)"></span>
+      <span class="dot" onclick="goToTestimonial(21)"></span>
+      <span class="dot" onclick="goToTestimonial(22)"></span>
+      <span class="dot" onclick="goToTestimonial(23)"></span>
+      <span class="dot" onclick="goToTestimonial(24)"></span>
+      <span class="dot" onclick="goToTestimonial(25)"></span>
+      <span class="dot" onclick="goToTestimonial(26)"></span>
+      <span class="dot" onclick="goToTestimonial(27)"></span>
+      <span class="dot" onclick="goToTestimonial(28)"></span>
+      <span class="dot" onclick="goToTestimonial(29)"></span>
+    </div>
+   <script>
+   let currentTestimonial = 0;
+const testimonials = document.querySelectorAll(".testimonial");
+const dots = document.querySelectorAll(".dot");
+
+function showTestimonial(index) {
+  testimonials.forEach((testimonial, i) => {
+    testimonial.style.display = i === index ? "block" : "none";
+    dots[i].classList.remove("active");
+  });
+
+  // Activate the selected dot
+  dots[index].classList.add("active");
+}
+
+// Change testimonial manually
+function changeTestimonial(step) {
+  currentTestimonial += step;
+
+  if (currentTestimonial >= testimonials.length) {
+    currentTestimonial = 0;
+  } else if (currentTestimonial < 0) {
+    currentTestimonial = testimonials.length - 1;
+  }
+
+  showTestimonial(currentTestimonial);
+}
+
+// Go directly to a testimonial via dots
+function goToTestimonial(index) {
+  currentTestimonial = index;
+  showTestimonial(currentTestimonial);
+}
+
+// Auto-slide every 5 seconds
+setInterval(() => changeTestimonial(1), 2000);
+
+// Show the first testimonial by default
+showTestimonial(currentTestimonial);</script>
+
+ </section> 
+
+<footer>
+    <!-- Logo and QR Code -->
+   
+        <img src="homebasecrew logo1.png" alt="Home Base Crew Logo" class="logo" width="150" height="100">
+        <img src="homebasecrew qr code.png" alt="Home Base Crew QR Code" class="qr-code" width="150" height="200">
+    </div>
+
+    <!-- Navigation Links -->
+    <nav>
+        
+            <a href="index.html">Home</a>
+            <a href="homebasecrew about.html">About Us</a>
+            <a href="homebasecrew service.html">Skills Needed</a>
+            <a href="homebasecrew contact.html">Apply Now</a>
+            <a href="homebasecrew faqs.html">FAQ'S</a>
+            <a href="homebasecrew testimonial.html">Testimonial</a>
+        
+    </nav>
+</div>
+    <!-- Copyright Text -->
+    <p class="copyright"><strong>&copy;2025 Home Base Crew. All rights reserved.</strong></p>
+    <p><strong>www.homebasecrew.com</strong></p>
+   
+    </footer>
+    
 </body>
 </html>
